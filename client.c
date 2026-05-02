@@ -49,6 +49,7 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
+
 void	send_char(int server_pid, char c)
 {
 	int	i;
@@ -89,9 +90,9 @@ int	main(int ac, char **av)
 		server_pid = ft_atoi(av[1]);
 		if (server_pid <= 0)
 		{
-            ft_putstr("Wrong pid. Please try again :(\n");
-            return(1);
-        }
+			ft_putstr("Wrong pid. Please try again :(\n");
+			return (1);
+		}
 		send_message(server_pid, av[2]);
 	}
 	else
